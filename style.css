@@ -1,0 +1,156 @@
+:root {
+  --ff-primary: "Poppins";
+
+  --fw-light: 200;
+  --fw-regular: 400;
+  --fw-bold: 600;
+  --fs-400: 0.9375rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.625rem;
+  --fs-900: 2.5rem;
+
+  --clr-neutral-900: hsl(234, 12%, 34%);
+  --clr-neutral-400: hsl(229, 6%, 66%);
+  --clr-neutral-100: hsl(0, 0%, 98%);
+
+  --clr-teal: hsl(179, 58%, 54%);
+  --clr-red: hsl(0, 70%, 62%);
+  --clr-blue: hsl(212, 83%, 63%);
+  --crl-yellow: hsl(34, 85%, 63%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  line-height: 1.7;
+  color: var(--clr-neutral-400);
+}
+
+body {
+  margin: 0;
+  padding-block-end: 5rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: var(--clr-neutral-900);
+}
+
+.wrapper {
+  max-width: 1280px;
+  padding-inline: 2rem;
+  margin-inline: auto;
+}
+
+.wrapper--narrow {
+  max-width: 550px;
+}
+
+header {
+  text-align: center;
+  margin-block: 5.5rem;
+}
+
+header>p {
+  font-size: var(--fs-400);
+}
+
+h1 {
+  font-weight: var(--fw-light);
+  font-size: var(--fs-600);
+}
+
+h1 span {
+  font-weight: var(--fw-bold);
+}
+
+.layout--grid {
+  display: grid;
+  --gap: 2rem;
+  gap: var(--gap);
+}
+
+.layout--grid>* {
+  flex: 1;
+}
+
+.col {
+  display: grid;
+  gap: var(--gap);
+  align-items: center;
+
+}
+
+.card {
+  padding: 2rem;
+  border-top: var(--br) solid;
+  --br: 0.325rem;
+  border-radius: var(--br);
+  box-shadow: 0px 16px 16px -3px rgba(0, 50, 100, 0.1);
+
+}
+
+.card__title {
+  font-size: var(--fs-600);
+  margin: 0;
+}
+
+.card__img {
+  display: block;
+  margin-left: auto;
+  margin-top: 2rem;
+
+}
+
+.border--teal {
+  border-color: var(--clr-teal);
+}
+
+.border--red {
+  border-color: var(--clr-red);
+}
+
+.border--yellow {
+  border-color: var(--crl-yellow);
+
+}
+
+.border--blue {
+  border-color: var(--clr-blue);
+}
+
+footer {
+  margin-top: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+
+  header {
+    margin-block: 8rem;
+  }
+
+  h1 {
+    font-size: var(--fs-900);
+  }
+
+  h1 span {
+    font-size: var(--fs-900);
+  }
+
+  header>p {
+    font-size: var(--fs-400);
+  }
+
+
+  .layout--grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
